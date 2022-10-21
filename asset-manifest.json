@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c239e12.css",
+    "main.js": "/static/js/main.3e13df39.js",
+    "static/media/collectionImg.svg": "/static/media/collectionImg.988e142f885b49d50e82559010191102.svg",
+    "static/media/trackImg.svg": "/static/media/trackImg.efc65fd8d1e8b5d11d89564c27508548.svg",
+    "static/media/chartImage.svg": "/static/media/chartImage.47c0dc1e914d19d40d6b208ae224ac7a.svg",
+    "static/media/wave.svg": "/static/media/wave.f2507a9f3b79a59c1282845f96f343b9.svg",
+    "static/media/releasesImg.png": "/static/media/releasesImg.f177b5d24770497cc453.png",
+    "static/media/chartImg.png": "/static/media/chartImg.85f969c6c2295bf042da.png",
+    "static/media/logo.svg": "/static/media/logo.f580730213d4541f99eeb6aece8480a1.svg",
+    "static/media/music-add-small.svg": "/static/media/music-add-small.dbaf3143c0e723e01bab6228667f7773.svg",
+    "static/media/nav-playlist.svg": "/static/media/nav-playlist.57af0b36d0c9fd860455b48450c9f4fa.svg",
+    "static/media/nav-playlist-active.svg": "/static/media/nav-playlist-active.45cb4a44d7344449354e39e22cdcefa6.svg",
+    "static/media/nav-radio.svg": "/static/media/nav-radio.4bbe8185b8778b544d745b4093102843.svg",
+    "static/media/nav-videos.svg": "/static/media/nav-videos.56d676eb27c1986f8a79f70783ea20b0.svg",
+    "static/media/red-heart-small.svg": "/static/media/red-heart-small.da8770291c335c0d749584f714e3c77b.svg",
+    "static/media/white-heart.svg": "/static/media/white-heart.a7dbb3a30875b2dd457a508329ff81f8.svg",
+    "static/media/dots-vertical.svg": "/static/media/dots-vertical.d3f3bdd2a46e555d8359998d2ac386dc.svg",
+    "static/media/play-collection.svg": "/static/media/play-collection.f932809e0635184bc02398f5158746a1.svg",
+    "static/media/nav-logout.svg": "/static/media/nav-logout.5b5863e04646beab4ed3f9a648513a45.svg",
+    "static/media/nav-profile.svg": "/static/media/nav-profile.53f0a0d87394f91c250ccbd1a145af52.svg",
+    "static/media/nav-home.svg": "/static/media/nav-home.384d00ea4f09bb365429f171c50662ae.svg",
+    "static/media/nav-home-active.svg": "/static/media/nav-home-active.8e2558612f20b9545ad7de9b49f8b833.svg",
+    "static/media/heart-outline.svg": "/static/media/heart-outline.e5ca004014645bd75e42793e962bcb02.svg",
+    "index.html": "/index.html",
+    "static/media/next.svg": "/static/media/next.a01851eb4d4acb68f815208401567c37.svg",
+    "static/media/search.svg": "/static/media/search.317583fdf261ffb92ea76113ceb6742f.svg",
+    "static/media/menu.svg": "/static/media/menu.cd25a0090d76ec6e2aa115cda2bbbdcb.svg",
+    "static/media/play-triangle-transparent.svg": "/static/media/play-triangle-transparent.51a54470976ccdd34d9de09ef1e934f6.svg",
+    "static/media/play-triangle.svg": "/static/media/play-triangle.34a776374cdbc106efa476de292e05a6.svg",
+    "main.0c239e12.css.map": "/static/css/main.0c239e12.css.map",
+    "main.3e13df39.js.map": "/static/js/main.3e13df39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c239e12.css",
+    "static/js/main.3e13df39.js"
+  ]
+}
