@@ -19,7 +19,7 @@ const Home = () => {
             <header className="container">
                 <Header props={ headerProps } />
             </header>
-            <main className="container relative">
+            <main className="container relative pb-28">
                 <CuratedPlaylist />
                 <div className="top-charts my-12 overflow-x-auto">
                     <h3 className="font-bold text-xl mb-3">Top Charts</h3>

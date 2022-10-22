@@ -26,7 +26,7 @@ const MyCollections = () => {
             <header className="container z-[3]">
                 <Header props={ headerProps } />
             </header>
-            <main className="container">
+            <main className="container pb-28">
                 <div className="tab-btns flex justify-between py-3">
                     <div 
                         className={`py-2 w-[48%] flex justify-center rounded-[27px] ${activeTab === "collection" ? "bg-gold text-darkBackground" : "border border-[#EFEEE0] opacity-25"}`} 

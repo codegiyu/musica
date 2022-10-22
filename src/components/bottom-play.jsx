@@ -8,7 +8,7 @@ import next from "../img/next.svg";
 
 const BottomPlay = () => {
     return (
-        <div className="flex items-center justify-between py-10 pl-2 pr-6 bg-transparent">
+        <div className="flex items-center justify-between py-6 pl-2 pr-6 bg-transparent">
             <div className="flex items-center gap-2">
                 <img src={ releasesImg } alt="now playing" className="w-[58px] aspect-square rounded-[16px]" />
                 <div className="font-bold text-white flex flex-col gap-0">

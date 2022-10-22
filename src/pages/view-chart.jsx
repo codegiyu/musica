@@ -22,7 +22,7 @@ const ViewChart = ({props}) => {
             <header className="container z-[3]">
                 <Header props={ headerProps } />
             </header>
-            <main className="container relative z-[3]">
+            <main className="container relative z-[3] pb-28">
                 <img src={ image } alt="chart name" className="w-full aspect-[1.2] rounded-[25px]" />
                 <div className="text-white py-4">
                     <h1 className="text-blueTint font-bold text-3xl my-2">{chartName}</h1>
