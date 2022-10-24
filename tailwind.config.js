@@ -35,6 +35,9 @@ module.exports = {
       transformOrigin: {
         waveMobile: "matrix(-0.56, -0.83, -0.83, 0.56, 0, 0)",
         waveDesktop: "rotate(-44.5deg)",
+      },
+      spacing: {
+        box: "calc(100% - 4px)",
       }
     },
   },

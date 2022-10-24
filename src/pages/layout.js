@@ -12,7 +12,7 @@ const Layout = () => {
             <Link to="/view-chart">View Chart</Link>
           </li>
           <li>
-            <Link to="/all-components">All Components</Link>
+            <Link to="/box">Box</Link>
           </li>
         </ul>
       </nav>

@@ -5,6 +5,7 @@ import Layout from "./pages/layout";
 import Home from "./pages/index";
 import ViewChart from "./pages/view-chart";
 import MyCollections from "./pages/my-collections";
+import BoxPage from "./pages/boxes";
 import chartImage from "./img/chartImage.svg";
 
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route exact path="view-chart" element={<ViewChart props={chartProps} />} />
           <Route exact path="collections" element={<MyCollections />} />
+          <Route exact path="box" element={<BoxPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
