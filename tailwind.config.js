@@ -26,7 +26,8 @@ module.exports = {
         mutedText: "#EFEEE025",
       },
       backgroundImage: {
-        viewChartGradient: "linear-gradient(to top, #1D2123 0%, #1D2123 25%, #1D212385 60%, #1D212355 100%)",
+        viewChartGradient: "linear-gradient(to top, #1D2123 0%, #1D2123 25%, #1D212385 60%, #1D212395 100%)",
+        viewChartGradientLG: "linear-gradient(to top, #1D2123 0%, #1D2123 35%, #1D212385 80%, #1D212395 100%)",
         collectionCard: "linear-gradient(179.89deg, rgba(0, 0, 0, 0) 0.1%, rgba(15, 18, 19, 0.85) 80.67%)"
       },
       boxShadow: {
@@ -38,8 +39,11 @@ module.exports = {
       },
       spacing: {
         box: "calc(100% - 4px)",
+        topChart: "calc(100% - 40px)",
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar-hide")
+  ],
 }

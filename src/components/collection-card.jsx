@@ -7,7 +7,7 @@ import playCollection from "../img/play-collection.svg";
 const CollectionCard = ({ props }) => {
     let {albumName, artist, likes, image} = props;
     let [imgHover, setimgHover] = useState(false)
-    let imgHoverClasses = imgHover ? "scale-[120%]" : ""
+    let imgHoverClasses = imgHover ? "scale-[120%] lg:scale-[130%]" : "lg:scale-[112%]"
 
     const formatLikes = () => {
         const zeros = str => str.length <= 3 ? 0 : 1 + zeros(str.slice(0, -3))
@@ -24,11 +24,11 @@ const CollectionCard = ({ props }) => {
     return (
         <div>
             <Link to="../view-chart?code=1">
-                <div className="flex w-full aspect-[1.5] relative rounded-[20px] overflow-hidden" 
+                <div className="flex w-full lg:w-[210px] aspect-[1.5] lg:aspect-[0.9] relative rounded-[20px] overflow-hidden" 
                     onMouseEnter={ hoverEffect } onMouseLeave={ cancelHoverEffect }
                 >
                     <img src={`${image}`} alt="release-name" 
-                        className={`w-full aspect-square absolute z-0 inset-0 ${imgHoverClasses} transition-transform duration-300`} 
+                        className={`w-full aspect-square lg:aspect-[0.9] absolute z-0 inset-0 ${imgHoverClasses} transition-transform duration-300`} 
                     />
                     <div className="absolute z-1 bg-collectionCard w-full h-full"></div>
                     <div className={`z-2 absolute bottom-0 left-0 pl-5 pb-5 transition-transform duration-300 ${imgHover ? "translate-y-0" : "translate-y-12"}`}>

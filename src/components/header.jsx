@@ -26,16 +26,19 @@ const Header = ({ props }) => {
     }
     return (
         <div className="relative py-6 bg-transparent text-mutedText text-[15px] font-bold ">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between lg:justify-start ">
                 <div className="menu-logo flex mr-3">
                     <img src={ menu } alt="menu" className="lg:hidden mr-3 w-7" onClick={toggleMenu} />
                     <Link to="/">
                         <img src={ logo } alt="logo" className="w-[34px]" />
                     </Link>
                 </div>
-                <form className="flex items-center py-1" onSubmit={ handleSubmit } method="post">
-                    <input type="search" name="searchMobile" id="" className="outline-0 border-none bg-inherit" />
-                    <button type="submit" className="bg-inherit outline-0 px-1">
+                <form className="flex items-center py-1 lg:ml-12 flex-grow" onSubmit={ handleSubmit } method="post">
+                    <input type="search" name="searchMobile" placeholder="Search artists"
+                        className="outline-0 order-1 lg:order-2 flex-grow border-none bg-inherit px-5 text-right lg:text-left
+                        placeholder:text-sm placeholder:font-semibold placeholder:text-[#FFFFFF25]" 
+                    />
+                    <button type="submit" className="bg-inherit order-2 lg:order-1 outline-0 px-1">
                         <img src={ search } alt="logo" className="w-7" />
                     </button>
                 </form>
