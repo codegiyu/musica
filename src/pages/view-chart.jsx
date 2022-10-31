@@ -8,12 +8,10 @@ import BottomPlay from "../components/bottom-play";
 import redHeart from "../img/red-heart-small.svg";
 import heartOutline from "../img/heart-outline.svg";
 import musicAdd from "../img/music-add-small.svg";
-import trackImg from "../img/trackImg.svg";
 import transparentPlayTriangle from "../img/play-triangle-transparent.svg";
 import TrackCard from "../components/track-card";
 import { useNavigate } from "react-router-dom";
 import apiClient from "../app/spotify/spotify";
-import useRef from "react";
 
 
 
@@ -27,9 +25,9 @@ const ViewChart = () => {
     let [isChartLiked, setIsChartLiked] = useState(false)
     let [chartData, setChartData] = useState({})
     let [tracksArr, setTracksArr] = useState([])
-    let [playtime, setPlaytime] = useStore((state) => [state.playtime, state.setPlaytime],)
-    let [volume, setVolume] = useStore((state) => [state.volume, state.setVolume],)
-    let [nowPlaying, setNowPlaying] = useStore((state) => [state.nowPlaying, state.setNowPlaying],)
+    let setPlaytime = useStore((state) => state.setPlaytime)
+    let setVolume = useStore((state) => state.setVolume)
+    let setNowPlaying = useStore((state) => state.setNowPlaying)
 
     let bottomProps = {max: 100, setPlaytime, setVolume, setNowPlaying}
 
@@ -85,7 +83,7 @@ const ViewChart = () => {
                 navigate("/login")
             }
         })
-    }, [])
+    }, [navigate])
 
     useEffect(() => {
         let reqType = window.location.pathname.split("/").find(item => item === "albums"|| item === "playlists")
@@ -134,11 +132,9 @@ const ViewChart = () => {
                 navigate("/login")
             }
         })
-    }, [chartData])
+    }, [chartData, navigate])
 
     
- 
-
     const TracksList = () => tracksArr.map((item, idx) => <TrackCard key={idx} props={{...item, setNowPlaying}} />) 
 
     return (

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import { Outlet, Link } from "react-router-dom";
 import "../index.css";
 import useStore from "../app/zustand/store";
-import releasesImg from "../img/releasesImg.png";
 import playTriangle from "../img/play-triangle.svg";
 import next from "../img/next.svg";
 import repeat from "../img/repeat.svg";

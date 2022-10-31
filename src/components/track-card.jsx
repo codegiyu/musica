@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import "../index.css";
-import useStore from "../app/zustand/store";
 import heartOutline from "../img/heart-outline.svg";
 import redHeart from "../img/red-heart-small.svg";
 import dots from "../img/dots-vertical.svg";

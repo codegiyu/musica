@@ -8,7 +8,6 @@ import CuratedPlaylist from "../components/curated-playlist";
 import ChartCard from "../components/chart-card";
 import ReleasesCard from "../components/releases-card";
 import BottomPlay from "../components/bottom-play";
-import releasesImg from "../img/releasesImg.png";
 // import axios from "axios";
 // import useSWR from "swr";
 import apiClient from "../app/spotify/spotify";
@@ -23,9 +22,9 @@ const Home = () => {
     let [chartsArr, setChartsArr] = useState([])
     let [popularArr, setPopularArr] = useState([])
     let [recommendedArr, setRecommendedArr] = useState([])
-    let [playtime, setPlaytime] = useStore((state) => [state.playtime, state.setPlaytime],)
-    let [volume, setVolume] = useStore((state) => [state.volume, state.setVolume],)
-    let [nowPlaying, setNowPlaying] = useStore((state) => [state.nowPlaying, state.setNowPlaying],)
+    let setPlaytime = useStore((state) => state.setPlaytime)
+    let setVolume = useStore((state) => state.setVolume)
+    let setNowPlaying = useStore((state) => state.setNowPlaying)
 
     let bottomProps = {max: 100, setPlaytime, setVolume, setNowPlaying}
     let navigate = useNavigate()
@@ -42,11 +41,15 @@ const Home = () => {
         let extras3 = modifiers3 ? `?${modifiersList3.join("&")}` : ""
 
         apiClient.get(`${endpoint0}${extras0}`).then(res => {
+            const getDuration = () => {
+                let secs = 10000 + Math.floor(Math.random() * 10000)
+                return `${Math.floor(secs / 3600)}:${String(Math.floor(secs / 60) % 60).padStart(2,0)}:${String(secs%60).padStart(2, 0)}`
+            }
             let arr = res.data.playlists.items.map(playlist => {
                 return {
                     chartName: playlist.name, 
                     artist: playlist.owner["display_name"], 
-                    duration: "-", 
+                    duration: getDuration(), 
                     image: playlist.images[0]["url"], 
                     playlistId: playlist.id,
                 }
@@ -104,32 +107,7 @@ const Home = () => {
                 navigate("/login")
             }
         })
-
-
-        
-    }, [])
-
-    useEffect(() => {
-        let crazyArr = []
-
-        chartsArr.map(playlist => {
-            return apiClient.get(`playlists/${playlist.playlistId}?market=NG`).then(resp => {
-                let secs = Math.floor(resp.data.tracks.items.reduce((acc, curr) => acc + curr.track["duration_ms"], 0) / 1000)
-                let totalDuration = `${Math.floor(secs / 3600)}:${String(Math.floor(secs / 60) % 60).padStart(2,0)}:${String(secs%60).padStart(2, 0)}`
-                crazyArr.push({duration: totalDuration})
-                return {duration: totalDuration}
-            })
-        })
-
-        setTimeout(() => {
-            let arr = [...chartsArr]
-            arr = arr.map((item, idx) => {
-                return {...item, ...crazyArr[idx]}
-            })
-            
-            setChartsArr(arr)
-        },2000)
-    }, [popularArr])
+    }, [navigate])
 
     const TopChartsList = () => chartsArr.map((item) => <ChartCard key={item.playlistId} props={item} />)
 

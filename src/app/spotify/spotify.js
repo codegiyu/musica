@@ -1,5 +1,4 @@
 import axios from "axios";
-import useSWR from "swr";
 
 
 const authEndpont = "https://accounts.spotify.com/authorize?";
