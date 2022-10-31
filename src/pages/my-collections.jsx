@@ -13,6 +13,7 @@ import BottomPlay from "../components/bottom-play";
 
 
 let headerProps = {activePage: "playlist"}
+let bottomProps = {max: 100};
 let collectionProps = {albumName: "Limits", artist: "John Watts", likes: 2310287, image: `${collectionImg}`}
 
 const MyCollections = () => {
@@ -56,7 +57,7 @@ const MyCollections = () => {
                         bg-playBackground backdrop-blur-[15px] flex gap-4">
                         <div className="w-[50px] hidden lg:flex"></div>
                         <section className="w-auto flex-grow">
-                            <BottomPlay />
+                            <BottomPlay props={bottomProps} />
                         </section>
                     </section>
                 </section>

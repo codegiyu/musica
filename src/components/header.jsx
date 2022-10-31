@@ -46,7 +46,7 @@ const Header = ({ props }) => {
             <div className={`menu-pane z-[100] transition-all absolute ${menuState ? "translate-x-0" : "translate-x-full "} right-[-1.1rem] top-0 w-4/5 h-[500px] px-6 pt-24 bg-dark lg:hidden`}>
                 <nav>
                     <ul className="flex flex-col gap-8">
-                        <Link to="/"><li className="flex gap-7 items-center">
+                        <Link to="/"><li className="flex gap-7 items-center pl-[10px]">
                             { activePage === "home" 
                                 ? <img src={ homeActive } alt="home" className="w-5" /> 
                                 : <img src={ home } alt="home" className="w-5" />
@@ -72,10 +72,10 @@ const Header = ({ props }) => {
                             <img src={ profile } alt="home" className="w-6" />
                             <p className="">Profile</p>
                         </li>
-                        <li className="flex gap-7 items-center">
+                        <Link to="/login"><li className="flex gap-7 items-center" onClick={() => localStorage.removeItem("token")}>
                             <img src={ logout } alt="home" className="w-6" />
                             <p className="">Log out</p>
-                        </li>
+                        </li></Link>
                     </ul>
                 </nav>
             </div>

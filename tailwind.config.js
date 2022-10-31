@@ -40,6 +40,7 @@ module.exports = {
       spacing: {
         box: "calc(100% - 4px)",
         topChart: "calc(100% - 40px)",
+        main: "calc(100% - 50px)",
       }
     },
   },

@@ -22,22 +22,18 @@ const Aside = ({props}) => {
                             ? <img src={ homeActive } alt="home" className="w-5" /> 
                             : <img src={ home } alt="home" className="w-5" />
                         }
-                        {/* <p className={ activePage === "home" ? "text-white" : "text-mutedText" }>Home</p> */}
                     </li></Link>
                     <Link to="/collections"><li className="flex gap-7 items-center">
                         { activePage === "playlist" 
                             ? <img src={ playlistActive } alt="home" className="w-6" /> 
                             : <img src={ playlist } alt="home" className="w-6" />
                         }
-                        {/* <p className={ activePage === "playlist" ? "text-white" : "text-mutedText" }>My collections</p> */}
                     </li></Link>
                     <li className="flex gap-7 items-center">
                         <img src={ radio } alt="home" className="w-6" />
-                        {/* <p className="">Radio</p> */}
                     </li>
                     <li className="flex gap-7 items-center">
                         <img src={ videos } alt="home" className="w-6" />
-                        {/* <p className="">Music videos</p> */}
                     </li>
                     
                 </ul>
@@ -46,12 +42,10 @@ const Aside = ({props}) => {
                 <ul className="flex flex-col gap-8">
                     <li className="flex gap-7 items-center">
                         <img src={ profile } alt="home" className="w-6" />
-                        {/* <p className="">Profile</p> */}
                     </li>
-                    <li className="flex gap-7 items-center">
+                    <Link to="/login"><li className="flex gap-7 items-center" onClick={() => localStorage.removeItem("token")}>
                         <img src={ logout } alt="home" className="w-6" />
-                        {/* <p className="">Log out</p> */}
-                    </li>
+                    </li></Link>
                 </ul>
             </nav>
             <Outlet />
