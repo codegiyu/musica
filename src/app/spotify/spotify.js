@@ -4,7 +4,7 @@ import useSWR from "swr";
 
 const authEndpont = "https://accounts.spotify.com/authorize?";
 const clientID = "4cec3e2379a4458db2e0a94fb78f63ff";
-const redirectUri = "http://localhost:3000";
+const redirectUri = "https://musica-challenge.vercel.app";
 const scopes = ["user-read-playback-state", "user-modify-playback-state", "user-read-currently-playing", 
                 "user-library-modify", "user-library-read", "streaming"];
 
