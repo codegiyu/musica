@@ -30,7 +30,7 @@ const BottomPlay = ({props}) => {
         width: `${volume}%`
     }
 
-    console.log(useStore())
+    // console.log(useStore())
 
     return (
         <div className="flex items-center justify-between py-6 pl-2 pr-6 bg-transparent">

@@ -12,8 +12,10 @@ import { setClientToken } from "./app/spotify/spotify";
 
 export default function App() {
   let [token, setToken] = useState("")
+  console.log(window.location)
 
   useEffect(() => {
+    console.log(window.location)
     let savedToken = localStorage.getItem("token")
     let hash = window.location.hash;
     window.location.hash = ""
